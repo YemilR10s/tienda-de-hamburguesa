@@ -71,6 +71,9 @@ header .links li a:hover{
     margin-top: 100px;
     display: flex;
     height: 500px;
+    flex-wrap: nowrap;
+    gap: 1em;
+    
 
 }
 
@@ -106,12 +109,16 @@ header .links li a:hover{
 }
 /* img */
 .text-img-container .container-img{
-    width: 50%;
-    background-image: url(imgs/cook.jpg);
-    background-position: center;
-    background-size: cover;
+    width: 50%;   
+    aspect-ratio: 1/1;
+}
+.text-img-container .container-img img{
+    width: 400px;  
+    height: 400px;
+    object-fit: cover; 
     border-radius: 50%;
-    margin-left: 100px;
+    text-align: center;
+    margin-left: 50px;
     
     
 }
@@ -194,7 +201,7 @@ header .links li a:hover{
 
  }
 
- /* **************************section 3 ******************* */
+ /* *********************************************SECTION THREE ************************************* */
 
 .section3{
     max-width: 1100px;
@@ -289,7 +296,7 @@ header .links li a:hover{
     color: var(--gris);
 }
 
-/* *******************************foooter*********************** */
+/* ************************************************FOOTER************************************** */
 
 footer{
     width: 100%;
@@ -363,23 +370,21 @@ footer{
 /* ****************************respinsive 1150px **************************** */
 
 
-@media (max-width:1150px) {
+@media (max-width:1000px) {
 
     /* ******  header ******* */
-    header h1 {
-       margin-left: 100px;
-    }
+    
     
     header .links{
-        margin-right: 30px;
+        margin-right: 50px;
     }
     
         /* ******  section one ******* */
 
-        
         .text-img-container .text{
-            margin-left: 100px;
+            margin-left: 50px;
         }
+        
         .text-img-container .img {
             width: 50%;
             margin-right: 100px;
@@ -509,7 +514,33 @@ footer{
     position: relative;
     top: 300px;
 }
-.items-container .items{
+/* FOTER */
+.footer-container{
+    width: 100%;
+    height: 1000px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+}
+.footer-container .img-footer-container{
+    width: 400px;
+    height: 400px;
+    margin-left: 170px;
+    background-position: center;
+    text-align: center;
     
 }
+.footer-container .items-footer-container{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 }
