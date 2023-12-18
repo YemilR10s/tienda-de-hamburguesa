@@ -151,17 +151,23 @@ header .links li a:hover{
 /* *************************************** SECTION two ************************************************* */
 
 .section2{
-    margin-top: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 1100px;
+
+   
+}
+.section2 .section2-container{
     width: 100%;
-    height: 1050px;
+    height: 100%;
     background-image: url(imgs/services_bg.jpg);
     background-size: cover;
     background-position: center;
-}
+    position: relative;
+    top: 100px;
 
+}
 .items-container{
-    max-width: 1100px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1em;
@@ -207,6 +213,8 @@ header .links li a:hover{
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    top: 100px;
  }
  .section3 h3{
     margin: 20px 0;
@@ -301,6 +309,8 @@ header .links li a:hover{
 footer{
     width: 100%;
     background: #000;
+    position: relative;
+    top: 200px;
 }
 .footer-container{
     max-width: 1100px;
@@ -369,178 +379,3 @@ footer{
 
 /* ****************************respinsive 1150px **************************** */
 
-
-@media (max-width:1000px) {
-
-    /* ******  header ******* */
-    
-    
-    header .links{
-        margin-right: 50px;
-    }
-    
-        /* ******  section one ******* */
-
-        .text-img-container .text{
-            margin-left: 50px;
-        }
-        
-        .text-img-container .img {
-            width: 50%;
-            margin-right: 100px;
-            height: 450px;
-
-        
-        }
-        .galery-container{
-            margin-left: 70px;
-            margin-right: 100px;
-        }
-        .galery-container .item{
-            width: 180px;
-            aspect-ratio: 1/1;
-           
-           
-        }
-          /* ******  section two ******* */
-
-          .section2{
-            height: 1200px;
-          
-        }
-        .items-container {
-            
-            margin: 0px 80px;
-        }
-          /* ******  section three ******* */
-
-          
-        .section3 .menu-container .menu-items{
-            width: 250px;
-            height: 150px;
-            margin: 10px 0px;
-            
-        
-         }
-
-         
-        
-}
-
-
-/* ****************************respinsive 1150px **************************** */
-
- @media (max-width:900px){
-    /* header */
-    header .links{
-        display: none;
-    }   
-    header .hamburguer{
-        display: block;
-        font-size: 2em;
-        margin-right: 30px;
-        margin-top: 10px;
-    }  
-    /* section 1 */
-    .section1{
-        height: 1450px;
-    }
-    header h1 {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-    }
-    .text-img-container{
-        max-width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-        margin-left: 0;
-    
-    }
-    .text-img-container .text{
-        text-align: center;
-        margin-left: 0;
-       
-    
-    }
-    .text-img-container button{
-        width: 200px;
-        align-items: center;
-        margin: 0;
-        text-align: center;
-        margin: 30px 0px;
-        margin-left: 120px;
-        
-    }
-    .text-img-container .container-img{
-        margin-left: 0;
-        
-    }
-    .text-img-container .container-img img{
-        width: 500px;
-    }
-
-    /* galery */
-    .galery-container{
-    margin-top: 300px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    gap: 1.5em;
-    
-   }
-   .galery-container .item{
-    width: 100%;
-    height: 200px;
-   }
-    /***************** section 2 *****************/
-
-   .section2{
-    margin-top: 0;
-    width: 100%;
-    height: 1100px;
-    
-  }
-  .items-container{
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1em;
-    color: white;
-    position: relative;
-    top: 300px;
-}
-/* FOTER */
-.footer-container{
-    width: 100%;
-    height: 1000px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    background-position: center;
-}
-.footer-container .img-footer-container{
-    width: 400px;
-    height: 400px;
-    margin-left: 170px;
-    background-position: center;
-    text-align: center;
-    
-}
-.footer-container .items-footer-container{
-    margin-top: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-}
