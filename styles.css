@@ -1,5 +1,4 @@
 *{
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,10 +12,10 @@
     --gris: rgba(200, 197, 197, 0.927);
     --Black: rgba(0, 0, 0, 0.927);
 }
-/* ****************************** header  ****************** */
+/* ****************************** header  ************************************ */
 
 header{
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -56,11 +55,58 @@ header .links li a:hover{
     border-radius: 10px;
 }
 
+/* **************** Header respinsive ********************** */
+@media screen and (max-width:900px) {
 
+    header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    header .hamburguer{
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    header h1{
+       font-size: 2.5em;
+       margin-left: 40px;
+
+    }
+    header .links{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: var(--red);
+        width: 100%;
+        height: 100vh;
+        
+    }
+    header .links.active{
+        display: flex;
+    }
+
+    header .links li a{
+        width: 100%;
+        text-align: center;
+        color: var(--gris);
+        
+
+    
+    
+    }
+    
+}
 /* *************************************** SECTION ONE ************************************************* */
 .section1{
 
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 
@@ -102,6 +148,7 @@ header .links li a:hover{
     border-radius: 10px;
     background-color: var(--red);
     transition: 0.5s;
+    cursor: pointer;
 }
 .text-img-container button:hover{
     background-color: black;
@@ -148,13 +195,62 @@ header .links li a:hover{
 .galery-container .item img:hover{
     scale: 1.1;
 }
+/* **************** section uno respinsive ********************** */
+@media screen and (max-width:1200px) {
+    .section1{
+        width: 100%;
+    }
+    .text-img-container .text{
+        width: 50%;
+        margin-left: 40px;
+    
+    }
+    
+}
+@media screen and (max-width:900px) {
+    .text-img-container{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        height: 800px;
+        flex-wrap: wrap-reverse;
+        gap: 1em;
+        
+    }
+    .text-img-container .text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .text-img-container .container-img{
+        width: 100%; 
+        height: 500px;
+        text-align: center;  
+        aspect-ratio: 1/1;
+        
+    }
+    .galery-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+        margin: 40px;
+        
+    }
+}
+@media screen and (max-width:730px){
+    .galery-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3em;
+        margin: 60px;
+       
+    }
+}
 /* *************************************** SECTION two ************************************************* */
 
 .section2{
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 1100px;
-
    
 }
 .section2 .section2-container{
@@ -174,6 +270,7 @@ header .links li a:hover{
     color: white;
     position: relative;
     top: 400px;
+    padding: 20px;
 }
 .items-container .items{
     background-color: black;
@@ -206,11 +303,54 @@ header .links li a:hover{
     text-decoration: underline;
 
  }
+/* **************** section two respinsive ********************** */
+@media screen and (max-width:900px){
+    .section2{
+        width: 100%;
+        height: 1000px;
+       
+    }
+    .items-container{
+        grid-template-columns: auto auto;
+        gap: 1em;
+        padding: 20px;
+        top: 0;
+    }
+}
+@media screen and (max-width:730px){
+    .section2{
+        width: 100%;
+        height: 1720px;
+        margin: 0;
+       
+    }
+    .items-container{
+        grid-template-columns: auto;
+        gap: 2em;
+        padding: 20px;
+    }
 
+}
+@media screen and (max-width:500px){
+    .section2{
+        width: 100%;
+        height: 2000px;
+        margin: 0;
+       
+    }
+}
+@media screen and (max-width:400px){
+    .section2{
+        width: 100%;
+        height: 2100px;
+        margin: 0;
+       
+    }
+}
  /* *********************************************SECTION THREE ************************************* */
-
+ 
 .section3{
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -228,17 +368,18 @@ header .links li a:hover{
  }
  
  .section3 .menu-container{
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 12px;
-    justify-content:space-around ;
+    gap: 16px;
+    padding: 16px;
     margin-top: 50px;
+    
 
  } 
  .section3 .menu-container .menu-items{
     width: 350px;
     height: 250px;
-    
     background-size: cover;
     background-position: center;
  }
@@ -303,7 +444,28 @@ header .links li a:hover{
     background-color: var(--red);
     color: var(--gris);
 }
+/* **************** section three respinsive ********************** */
 
+@media screen and (max-width:1100px){
+    .section3 .menu-container{
+        display: grid;
+        grid-template-columns: auto auto ;
+        gap: 2em;
+        justify-content: space-around;
+              
+    
+     } 
+}
+@media screen and (max-width:800px){
+    .section3 .menu-container{
+        display: grid;
+        grid-template-columns: auto ;
+        gap: 2em;
+        
+              
+    
+     } 
+}
 /* ************************************************FOOTER************************************** */
 
 footer{
@@ -314,15 +476,14 @@ footer{
 }
 .footer-container{
     max-width: 1100px;
-    height: 700px;
+    height: 100vh;
     margin: 0 auto;
     margin-top: 50px;
     display: flex;
 }
 .footer-container .img-footer-container{
     width: 50%;
-    height: 500px;
-    margin-top: 100px;
+    height: 100vh;
     background-image: url(imgs/contact.jpg);
 }
 .footer-container .items-footer-container{
@@ -344,7 +505,7 @@ footer{
 .footer-container .items-footer-container .item2 input{
     width: 300px;
     padding: 5px 0;
-    background-color: #000;
+    background-color: #fff9f9;
     border: none;
     border-bottom: 1px solid white;
     margin-top: 50px;
@@ -356,6 +517,7 @@ footer{
     border: none;
     background-color: var(--red);
     color: white;
+    cursor: pointer;
 }
 .footer-container .items-footer-container .item3{
     display: flex;
@@ -376,6 +538,45 @@ footer{
     margin: 10px;
 }
 
+/* **************** footer respinsive ********************** */
 
-/* ****************************respinsive 1150px **************************** */
+@media screen and (max-width:900px){
+    footer{
+        background-image: url(imgs/contact.jpg);
+
+    }
+    .footer-container .img-footer-container{
+        display: none;
+    }
+   
+    .footer-container .items-footer-container{
+        width: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+}
+@media screen and (max-width:450px){
+    .footer-container .items-footer-container .item2{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container .items-footer-container .item2 button{
+        padding: 8px 15px;
+        margin-left: 0;
+        margin: 20px 0;
+        border: none;
+        background-color: var(--red);
+        color: white;
+    }
+    .footer-container .items-footer-container .item3 .left{
+        margin-left: 20px;
+    }
+    
+}
+
+
+
 
