@@ -1,3 +1,13 @@
+
+window.addEventListener('scroll', ()=>{
+    let header = document.getElementById('header')
+    let span = document.getElementById('span')
+    let links = document.getElementById('links')
+    header.classList.toggle('scroll', window.scrollY>0)
+    span.classList.toggle('scroll', window.scrollY>0)
+    links.classList.toggle('scroll', window.scrollY>0)
+})
+
 function disponible(){
    let boton =  document.getElementById('botones')
     
